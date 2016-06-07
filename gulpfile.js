@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
@@ -17,7 +17,7 @@ gulp.task('css', function() {
             browsers: ['last 2 versions', 'ie 8', 'ie 9'],
             cascade: false
         }))
-        .pipe(minifyCss())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('./assets/css/'))
         .on('error', notify.onError({
             message: 'Error compiling CSS',
