@@ -27,28 +27,20 @@ Finally, if at any time you wish to migrate the database then simply execute:
 
 ## Compiling Styles and JS
 
-Included in the skeleton are optional Gulp files for compiling your Sass and JS files. By default compiled files are ignored from VCS so as to minimise conflicts.
+Included in the skeleton is a [Laravel Mix](https://laravel-mix.com/docs/2.1/basic-example) configuration to compile your styles and JS with [Webpack](https://webpack.js.org/). By default compiled files are ignored from VCS so as to minimise conflicts.
 
-Firstly, let's make sure you have Bower. If not, let's install it globally:
+Start by installing the compiling dependencies of your project:
 
-    npm install -g bower
+```
+npm install
+```
 
-Great, now let's install the asset dependencies:
+The following `npm` scripts are available for compiling your Sass into CSS and for compiling JS modules.
 
-    bower install
+- `npm run dev` compiles without minification
+- `npm run prod` compiles a production build of the files with minification
+- `npm run watch` creates a watch task which will re-run compilation on any of your source files being re-saved
 
-Install the compiling dependencies of your project:
+## If using from nailsapp/skeleton-docker-lamp
 
-    npm install
-
-The following `gulp` task is available for compiling your Sassinto CSS and for minifying your JS and generating sourcemaps:
-
-    gulp build
-
-You can see all available gulp commands by inspecting `gulpfile.js`.
-
-
-If you want to watch for changes in `*.scss` and `*.js` files then simply call `gulp` with no arguments:
-
-    gulp
-
+The build scripts are wrapped up in the `build.sh` and `watch.sh` files for usage within the context of the docker container. These can be accessed with `make watch` and `make build`.

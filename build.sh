@@ -24,13 +24,13 @@ npm install
 # --------------------------------------------------------------------------
 chmod -R 0755 vendor
 chmod g+w cache/public cache/private application/logs
+chmod +x ./vendor/nailsapp/module-console/console.php
 
 
 # --------------------------------------------------------------------------
 # If config files exist then simply migrate the database, if not, go
 # through the installer
 # --------------------------------------------------------------------------
-chmod +x ./vendor/nailsapp/module-console/console.php
 if [ -f "config/app.php" ] && [ -f "config/deploy.php" ]; then
     php ./vendor/nailsapp/module-console/console.php migrate --no-interaction
 else
@@ -42,4 +42,4 @@ fi
 # Execute the Gulp build command so that all JS and CSS is compiled
 # --------------------------------------------------------------------------
 rm -rf assets/build/css assets/build/js
-./node_modules/.bin/gulp build
+npm run production

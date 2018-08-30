@@ -42,7 +42,7 @@ Options +FollowSymlinks -Indexes
 
 # Restrict certain files
 # ------------------------------------------------
-<FilesMatch "README\.md|composer\.json|composer\.lock|package\.json|config/*|\.gitignore|gulpfile\.js|build\.sh|phpunit\.xml">
+<FilesMatch "README\.md|composer\.json|composer\.lock|package\.json|^config/*|\.gitignore|gulpfile\.js|build\.sh|phpunit\.xml">
     Require all denied
 </FilesMatch>
 

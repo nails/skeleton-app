@@ -32,10 +32,10 @@ class Base extends \Nails\Common\Controller\Base
         $oAsset = Factory::service('Asset');
 
         //  Load CSS from the app's `assets/build/css` directory
-        $oAsset->load('app.min.css');
+        $oAsset->load('app.css');
 
         //  Load JS from the app's `assets/build/js` directory
-        $oAsset->load('app.min.js');
+        $oAsset->load('app.js');
     }
 
     private function loadMeta()

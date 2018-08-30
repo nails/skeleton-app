@@ -60,3 +60,4 @@ config/deploy.php
 
 # Built CSS & JS
 assets/build
+assets/mix-manifest.json
