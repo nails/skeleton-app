@@ -3,10 +3,10 @@
 namespace App\Seed\DefinedEntity;
 
 use Nails\Cdn\Constants;
-use Nails\Common\Console\Seed\DefaultSeed;
+use Nails\Common\Console\Seed\Model;
 use Nails\Factory;
 
-class Cdn extends DefaultSeed
+class Cdn extends Model
 {
     const CONFIG_PRIORITY     = 0;
     const CONFIG_NUM_PER_SEED = 10;
