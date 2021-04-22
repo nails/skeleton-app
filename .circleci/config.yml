@@ -26,7 +26,10 @@ jobs:
             - composer-dependencies-
 
       # Execute Composer install
-      - run: composer --no-interaction --optimize-autoloader install
+      - run:
+          command: composer --no-interaction --optimize-autoloader install
+          environment:
+            PRIVATE_KEY: abc123
 
       # Save Composer cache
       - save_cache:
@@ -41,7 +44,10 @@ jobs:
 
       # Execute Yarn install and build
       - run: yarn install
-      - run: ./scripts/build.sh
+      - run:
+          command: ./scripts/build.sh
+          environment:
+            PRIVATE_KEY: abc123
 
       # Save Yarn cache
       - save_cache:
@@ -50,4 +56,7 @@ jobs:
           key: yarn-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: ./vendor/bin/phpunit
+      - run:
+          command: ./vendor/bin/phpunit
+          environment:
+            PRIVATE_KEY: abc123
