@@ -2,7 +2,6 @@
 
 ![license](https://img.shields.io/badge/license-MIT-green.svg)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/nails/skeleton-app.svg)](https://circleci.com/gh/nails/skeleton-app)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nails/skeleton-app/badges/quality-score.png)](https://scrutinizer-ci.com/g/nails/skeleton-app)
 
 This is a skeleton app for Nails, the absolute basics for a Nails application. Update this README file with details about your project.
 
