@@ -33,7 +33,7 @@ module.exports = ()  => {
          * - Define starting files for compilation here - each will be compiled as `<entry-key>.js`
          */
         entry: {
-            app: path.resolve(__dirname, 'assets/js/app.js'),
+            app: path.resolve(__dirname, 'assets/js/app.js')
         },
         /**
          * Output
@@ -82,14 +82,17 @@ module.exports = ()  => {
                         {
                             loader: 'postcss-loader',
                             options: {
-                                plugins: () => [require('autoprefixer')]
+                                postcssOptions: {
+                                    plugins: [
+                                        require('autoprefixer')
+                                    ]
+                                }
                             }
                         },
                         {
                             loader: 'sass-loader',
                             options: {
-                                sourceMap: true,
-                                sourceMapContents: false
+                                sourceMap: true
                             }
                         }
                     ]
