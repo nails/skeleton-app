@@ -1,5 +1,5 @@
 {
-    "name": "shedcolelctive-client-project",
+    "name": "shedcollective-client-project",
     "version": "0.0.0",
     "description": "A project by Shed Collective.",
     "author": "Shed Collective <hello@shedcollective.org>",
@@ -8,26 +8,26 @@
     "license": "UNLICENSED",
     "scripts": {
         "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js"
     },
     "devDependencies": {
-        "@babel/core": "^7.2.2",
-        "@babel/preset-env": "^7.2.3",
-        "autoprefixer": "^9.4.5",
+        "@babel/core": "^7.2",
+        "@babel/preset-env": "^7.2",
+        "autoprefixer": "^10.4",
         "babel-core": "^7.0.0-bridge.0",
-        "babel-loader": "^8.0.5",
-        "cross-env": "^5.2.0",
-        "css-loader": "^2.1.0",
-        "file-loader": "^5.0.2",
-        "mini-css-extract-plugin": "^0.5.0",
+        "babel-loader": "^9.1",
+        "cross-env": "^7.0",
+        "css-loader": "^7.1",
+        "file-loader": "^6.2",
+        "mini-css-extract-plugin": "^2.9",
         "sass": "^1.28",
-        "postcss-loader": "^3.0.0",
-        "sass-loader": "^7.1.0",
-        "webpack": "^4.28.4",
-        "webpack-cli": "^3.2.1"
+        "postcss-loader": "^8.1",
+        "sass-loader": "^14.2",
+        "webpack": "^5.92",
+        "webpack-cli": "^5.1"
     },
     "dependencies": {
         "core-js": "3"
